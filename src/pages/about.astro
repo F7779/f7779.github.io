@@ -1,5 +1,16 @@
 ---
-
+// JS Frontmatter
+const pageTitle='About Me';
+const identity = {
+	name: 'Fern',
+	country: 'AU',
+	occupation: 'Developer',
+	hobbies: ['Coding', 'Gaming', 'Art']
+}
+const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Express', 'Mongo']
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,14 +19,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
 		<a href="/about/">About</a>
 		<a href="/blog/">Blog</a>
 
-		<h1>About Me</h1>
+		<h1>{pageTitle}</h1>
         <p>Boat goes binted 👽</p>
+
+		<p>Here are some {identity.name} facts:</p>
+		<ul>
+			<li>Country: {identity.country}</li>
+			<li>Occupation: {identity.occupation}</li>
+			<li>Hobbies: {identity.hobbies.join(', ')}</li>
+		</ul>
+		<p>Here are some {identity.name} skills:</p>
+		<ul>
+			{skills.map((skill) => (
+				<li>{skill}</li>
+			))}
+		</ul>
 	</body>
 </html>
