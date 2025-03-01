@@ -1,9 +1,9 @@
 ---
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
-const pageTitle = 'Blog';
+const pageTitle = "Blog";
 ---
 
 <html lang="en">
@@ -15,16 +15,16 @@ const pageTitle = 'Blog';
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-        <Header/>
+		<Header />
 
 		<h1>{pageTitle}</h1>
-        <p>Blog goes binted 👽</p>
+		<p>Blog goes binted 👽</p>
 
-        <ul>
-            <li><a href="/posts/alfa/">Alpha</a></li>
-            <li><a href="/posts/bravo/">Bravo</a></li>
-            <li><a href="/posts/charlie/">Charlie</a></li>
-          </ul>
+		<ul>
+			<li><a href="/posts/alfa/">Alpha</a></li>
+			<li><a href="/posts/bravo/">Bravo</a></li>
+			<li><a href="/posts/charlie/">Charlie</a></li>
+		</ul>
 		<Footer />
 	</body>
 </html>
