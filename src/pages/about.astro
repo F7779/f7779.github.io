@@ -11,6 +11,9 @@ const skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Express', 'Mongo']
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColour = 'green'
+const textCase = 'uppercase'
 ---
 
 <html lang="en">
@@ -20,6 +23,17 @@ const goal = 3;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<style define:vars={{skillColour, textCase}}>
+			h1 {
+				color: purple;
+				font-size: 4em;
+			}
+			.skill {
+				color: var(--skillColour);
+				font-weight: bold;
+				text-transform: var(--textCase);
+			}
+		</style>
 	</head>
 	<body>
         <a href="/">Home</a>
@@ -38,7 +52,7 @@ const goal = 3;
 		<p>Here are some {identity.name} skills:</p>
 		<ul>
 			{skills.map((skill) => (
-				<li>{skill}</li>
+				<li class="skill">{skill}</li>
 			))}
 		</ul>
 
